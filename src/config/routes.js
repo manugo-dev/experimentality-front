@@ -1,5 +1,5 @@
 const routes = {
-  home: '/home'
+  landing: '/'
 };
 
 export default routes;

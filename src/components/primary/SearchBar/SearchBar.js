@@ -10,6 +10,9 @@ class SearchBar extends Component {
     };
   }
 
+  componentDidMount() {
+    this.searchInput.focus();
+  }
   onChange = event => {
     this.setState({
       term: event.target.value
@@ -35,6 +38,7 @@ class SearchBar extends Component {
               type='text'
               value={this.state.term}
               className='searchBar__input'
+              ref={input => (this.searchInput = input)}
             />
           </form>
         </div>

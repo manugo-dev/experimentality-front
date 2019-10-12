@@ -13,7 +13,7 @@ const VideoDisplay = ({ video }) => {
         <iframe src={videoSrc} allowFullScreen title='Video player' />
       </div>
       <div className='videoDisplay__info'>
-        <h4 className='videoDisplay__title'>{video.snippet.title}</h4>
+        <div className='videoDisplay__title'>{video.snippet.title}</div>
         <div className='videoDisplay__desc'>{video.snippet.description}</div>
       </div>
     </div>

@@ -8,6 +8,7 @@ const MainLayout = props => {
     <div className='mainLayout'>
       <Header handleSearch={props.handleSearch} />
       <main className='mainLayout__container'>{children}</main>
+      <Footer />
     </div>
   );
 };

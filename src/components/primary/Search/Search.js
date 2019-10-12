@@ -27,11 +27,7 @@ class Search extends Component {
         }
       >
         {!showSearchBar ? (
-          <div
-            className='search__iconContainer'
-            onClick={this.toggleSearchBar}
-            focusControl={this.searchInput}
-          >
+          <div className='search__iconContainer' onClick={this.toggleSearchBar}>
             <Loupe className='search__icon' alt='Search Icon' />
           </div>
         ) : (

@@ -24,9 +24,17 @@
   &__info {
     flex: 2;
     padding: 30px;
+  }
 
-    h4 {
-    }
+  &__title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 900;
+  }
+
+  &__desc {
+    font-size: 1em;
+    line-height: 2em;
   }
 
   @include for-mobile {
@@ -34,6 +42,18 @@
 
     &__iframe {
       padding-bottom: 56%;
+    }
+  }
+
+  @include for-mobile {
+    &__title {
+      font-size: 1.5em;
+    }
+  }
+
+  @include for-tablet {
+    &__title {
+      font-size: 2em;
     }
   }
 }
