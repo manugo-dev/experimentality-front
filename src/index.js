@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import WebFont from 'webfontloader';
+import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+WebFont.load({
+  google: {
+    families: ['Comfortaa:300,400,700,900', 'sams-serif']
+  }
+});
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();

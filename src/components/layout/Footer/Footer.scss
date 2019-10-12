@@ -1,0 +1,16 @@
+@import 'styles/colors';
+
+.footer {
+  background: $dark-main-color;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(219, 219, 219);
+
+  &__logo {
+    width: 30px;
+    margin-right: 10px;
+    opacity: 0.4;
+  }
+}
