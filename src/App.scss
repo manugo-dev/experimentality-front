@@ -1,8 +1,10 @@
 @import 'styles/reset';
 @import 'styles/colors';
+@import 'styles/mixins';
 
 .App {
   text-align: center;
+  font-family: 'Comfortaa', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .App-logo {

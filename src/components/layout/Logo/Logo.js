@@ -6,7 +6,8 @@ import LogoImg from './logo-white.png';
 
 const Logo = () => (
   <div className='logo'>
-    <img src={LogoImg} alt='Experimentality Logo' />
+    <img src={LogoImg} className='logo__img' alt='Experimentality Logo' />
+    <div className='logo__text'>Experimentality</div>
   </div>
 );
 

@@ -1,0 +1,19 @@
+@import 'styles/mixins';
+@import 'styles/colors';
+
+header,
+.header {
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: $main-color;
+  background: -webkit-linear-gradient(
+    48deg,
+    $light-main-color 0%,
+    $main-color 100%
+  );
+  background: linear-gradient(42deg, $light-main-color 0%, $main-color 100%);
+  position: relative;
+}

@@ -1,5 +1,16 @@
 // Main app colors
 
-$main-color: #1abc9c;
-$light-main-color: #a1cb00;
+/// @access public
+$main-color: rgb(26, 188, 156);
+$light-main-color: rgb(161, 203, 0);
 $dark-main-color: #333333;
+$main-color-alpha: rgba(26, 188, 156, 0.5);
+$light-color-alpha: rgba(161, 203, 0, 0.5);
+$dark-color-alpha: rgba(44, 44, 44, 0.5);
+
+:root {
+  --main-color: #1abc9c;
+  --light-main-color: #a1cb00;
+  --dark-main-color: #333333;
+  --main-color-alpha: rgb(26, 188, 156, 0.5);
+}
