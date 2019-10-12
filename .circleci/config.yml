@@ -1,31 +1,18 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: node:11.10.1
-
     working_directory: ~/repo
-
+    machine: true
+    branches:
+      only:
+        - master
     steps:
       - checkout
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-
-      - run: yarn install
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
-      # run tests!
-      - run: npm test
-
-      - run: npm build
-
-      - run: npm netlify:deploy
+      - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
+      - run:
+          name: build docker image
+          command: |
+            echo "deploying to development environment"
+            docker build -t experimentality-front .
+            docker tag experimentality-front manuelgomezo/experimentality-front
+            docker push manuelgomezo/experimentality-front
