@@ -7,7 +7,9 @@ const MainLayout = props => {
   return (
     <div className='mainLayout'>
       <Header handleSearch={props.handleSearch} />
-      <main className='mainLayout__container'>{children}</main>
+      <main className='mainLayout__container' aria-label='Main Container'>
+        {children}
+      </main>
       <Footer />
     </div>
   );

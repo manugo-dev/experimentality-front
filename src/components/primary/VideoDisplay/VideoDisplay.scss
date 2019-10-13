@@ -43,11 +43,21 @@
     &__iframe {
       padding-bottom: 56%;
     }
-  }
 
-  @include for-mobile {
     &__title {
       font-size: 1.5em;
+    }
+  }
+
+  @include for-small-mobile {
+    padding: 20px;
+
+    &__title {
+      font-size: 0.9em;
+    }
+
+    &__desc {
+      font-size: 0.8em;
     }
   }
 

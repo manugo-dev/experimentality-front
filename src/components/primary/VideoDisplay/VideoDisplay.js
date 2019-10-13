@@ -10,11 +10,26 @@ const VideoDisplay = ({ video }) => {
   return (
     <div className='videoDisplay'>
       <div className='videoDisplay__iframe'>
-        <iframe src={videoSrc} allowFullScreen title='Video player' />
+        <iframe
+          src={videoSrc}
+          allowFullScreen
+          title='Video player'
+          aria-label={`Player for: ${video.snippet.title}`}
+        />
       </div>
       <div className='videoDisplay__info'>
-        <div className='videoDisplay__title'>{video.snippet.title}</div>
-        <div className='videoDisplay__desc'>{video.snippet.description}</div>
+        <div
+          className='videoDisplay__title'
+          aria-label={`Title of: ${video.snippet.title}`}
+        >
+          {video.snippet.title}
+        </div>
+        <div
+          className='videoDisplay__desc'
+          aria-label={`Description of ${video.snippet.title}`}
+        >
+          {video.snippet.description}
+        </div>
       </div>
     </div>
   );

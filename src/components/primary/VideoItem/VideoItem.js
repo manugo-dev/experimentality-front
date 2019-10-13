@@ -22,10 +22,16 @@ class VideoItem extends Component {
           src={video.snippet.thumbnails.medium.url}
           className='videoItem__thumbnail'
           alt={video.snippet.title}
+          aria-label={`Video thumbnail for: ${video.snippet.title}`}
         />
         <div className='videoItem__infoContainer'>
           <div className='videoItem__info'>
-            <div className='videoItem__title'>{video.snippet.title}</div>
+            <div
+              className='videoItem__title'
+              aria-label={`Video list item name: ${video.snippet.title}`}
+            >
+              {video.snippet.title}
+            </div>
           </div>
         </div>
       </ItemContainer>

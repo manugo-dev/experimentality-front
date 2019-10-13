@@ -5,12 +5,12 @@ import { YoutubeAPI } from 'services';
 import './Landing.scss';
 
 const MAX_VIDEOS = 6;
-const API_KEY = 'AIzaSyDOxZ7q2PBA-eanC07IXACZ__VR9QfO_zw';
+const API_KEY = 'AIzaSyAM1B0tbFPeVQ52_I77_bH7luhskWmcP6E';
 
 class Landing extends Component {
   constructor(props) {
     super(props);
-    this.state = { videos: [], selectedVideo: null };
+    this.state = { videos: [], selectedVideo: null, userDoSearch: false };
   }
 
   componentDidMount() {
@@ -30,7 +30,8 @@ class Landing extends Component {
       }
     });
     this.setState({
-      videos: response.data.items
+      videos: response.data.items,
+      userDoSearch: false
     });
   };
 
@@ -46,7 +47,8 @@ class Landing extends Component {
       }
     });
     this.setState({
-      videos: response.data.items
+      videos: response.data.items,
+      userDoSearch: true
     });
   };
 
@@ -58,13 +60,22 @@ class Landing extends Component {
     return (
       <MainLayout handleSearch={this.handleSearch}>
         <div className='landing'>
-          <div className='landing_videoList'>
+          <div className='landing__videoList' aria-label='Video playlist'>
+            {!this.state.userDoSearch ? (
+              <h2>Recommmended videos</h2>
+            ) : (
+              <h2>Search results</h2>
+            )}
             <VideoList
               onVideoSelect={this.onVideoSelect}
               videos={this.state.videos}
+              userDoSearch={this.state.userDoSearch}
             />
           </div>
-          <div className='landing_videoDisplay'>
+          <div
+            className='landing__videoDisplay'
+            aria-label='Video player with info'
+          >
             <VideoDisplay video={this.state.selectedVideo} />
           </div>
         </div>
