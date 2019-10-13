@@ -6,9 +6,16 @@ import LogoImg from './logo-white.png';
 
 const Logo = () => (
   <NavLink to={routes.landing}>
-    <div className='logo'>
-      <img src={LogoImg} className='logo__img' alt='Experimentality Logo' />
-      <div className='logo__text'>Experimentality</div>
+    <div className='logo' aria-label='Logo Container'>
+      <img
+        src={LogoImg}
+        className='logo__img'
+        alt='Experimentality Logo'
+        aria-label='Logo Image'
+      />
+      <div className='logo__text' aria-label='Experimentality'>
+        Experimentality
+      </div>
     </div>
   </NavLink>
 );

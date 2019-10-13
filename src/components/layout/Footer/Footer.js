@@ -3,8 +3,13 @@ import LogoImg from './logo-white.png';
 import './Footer.scss';
 
 const Footer = () => (
-  <div className='footer'>
-    <img src={LogoImg} alt='Experimentality Logo' className='footer__logo' />
+  <div className='footer' aria-label='Footer'>
+    <img
+      src={LogoImg}
+      alt='Experimentality Logo'
+      aria-label='Logo Experimentality'
+      className='footer__logo'
+    />
     made with love
   </div>
 );
