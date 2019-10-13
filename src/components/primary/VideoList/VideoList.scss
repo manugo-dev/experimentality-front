@@ -2,18 +2,10 @@
 @import 'styles/colors';
 
 .videoList {
-  padding: 30px;
-  background: $dark-main-color;
   display: flex;
   max-width: 100%;
   overflow: hidden;
   position: relative;
-  cursor: pointer;
-  -webkit-user-select: none; /* Chrome/Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+ */
-  -o-user-select: none;
-  user-select: none;
   height: 100%;
   align-items: center;
 

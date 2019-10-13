@@ -3,4 +3,22 @@
 
 .landing {
   color: $dark-main-color;
+
+  &__videoList {
+    padding: 30px;
+    background: $dark-main-color;
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    -o-user-select: none;
+    user-select: none;
+
+    h2 {
+      color: #fff;
+      font-weight: 900;
+      font-size: 1.2em;
+      padding: 0 20px;
+      margin-bottom: 20px;
+    }
+  }
 }
