@@ -6,7 +6,7 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 ARG REACT_APP_ENVIRONMENT
-RUN yarn build
+RUN npm build
 # move build folder to nginx
 # run nginx to server static files
 FROM nginx:stable
