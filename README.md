@@ -1,4 +1,4 @@
-# Experimentality FrontEnd API
+# Experimentality FrontEnd
 
 <p align="center">
   <a href="https://www.experimentality.co/">
