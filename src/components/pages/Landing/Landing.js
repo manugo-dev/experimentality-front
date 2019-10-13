@@ -58,13 +58,16 @@ class Landing extends Component {
     return (
       <MainLayout handleSearch={this.handleSearch}>
         <div className='landing'>
-          <div className='landing_videoList'>
+          <div className='landing_videoList' aria-label='Video playlist'>
             <VideoList
               onVideoSelect={this.onVideoSelect}
               videos={this.state.videos}
             />
           </div>
-          <div className='landing_videoDisplay'>
+          <div
+            className='landing_videoDisplay'
+            aria-label='Video player with info'
+          >
             <VideoDisplay video={this.state.selectedVideo} />
           </div>
         </div>

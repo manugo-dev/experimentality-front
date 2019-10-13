@@ -37,17 +37,23 @@ class SearchBar extends Component {
               name='videoSearch'
               type='text'
               value={this.state.term}
+              aria-label='Search input'
               className='searchBar__input'
               ref={input => (this.searchInput = input)}
             />
           </form>
         </div>
-        <button onClick={this.onSubmit} className='searchBar__button'>
+        <button
+          onClick={this.onSubmit}
+          className='searchBar__button'
+          aria-label='Search button'
+        >
           <Loupe className='search__icon' alt='Search Icon' />
         </button>
         <button
           onClick={this.props.toggleSearchBar}
           className='searchBar__close'
+          aria-label='Close search'
         >
           X
         </button>

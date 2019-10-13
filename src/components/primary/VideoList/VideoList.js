@@ -53,11 +53,20 @@ class VideoList extends Component {
           buttonsDisabled={true}
           dotsDisabled={true}
           ref={el => (this.Carousel = el)}
+          aria-label='Playlist carrousel'
         />
-        <div class='videoList__prev' onClick={() => this.Carousel.slidePrev()}>
+        <div
+          class='videoList__prev'
+          onClick={() => this.Carousel.slidePrev()}
+          aria-label='Next item on carrousel'
+        >
           <div class='arrow'></div>
         </div>
-        <div class='videoList__next' onClick={() => this.Carousel.slideNext()}>
+        <div
+          class='videoList__next'
+          onClick={() => this.Carousel.slideNext()}
+          aria-label='Prev item on carrousel'
+        >
           <div class='arrow'></div>
         </div>
       </div>
